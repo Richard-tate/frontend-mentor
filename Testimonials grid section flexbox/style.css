@@ -1,0 +1,342 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 80vh;
+    font-size: 13px;
+}
+main{
+    max-width: 1200px;
+    margin: 10rem auto;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    max-height: 580px;
+}
+.col-one{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-two{
+    display: flex;
+    max-width: 25%;
+    margin-bottom: 1%;
+}
+.col-one .daniel, .col-one .patrick{
+    width: 64%;
+    max-height: 48%;
+}
+.col-one .jonathan, .col-one .jeanette{
+    width: 32%;
+    max-height: 48%;
+}
+
+.col-one section{
+    margin-right: 2%;
+}
+
+.daniel,
+.jonathan,
+.kira,
+.jeanette,
+.patrick {
+  padding: 20px ;
+  border-radius: 8px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.daniel{
+    background-color: hsl(263,55%,52%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.daniel .user img:first-child {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #a174dd;
+  }
+  .daniel .user img:nth-child(4) {
+    position: absolute;
+    left: 65%;
+    top: .2rem;
+    z-index: 1;
+    width: 110px;
+  }
+  .daniel .second-text,
+  .jonathan .user h4 {
+    color: #aa7eed;
+  }
+  .jonathan {
+    background-color: hsl(217, 19%, 35%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .jonathan img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  
+  .jonathan .second-text,
+  .jonathan .user h4 {
+    color: #9097a7;
+  }
+
+  .kira {
+    background-color: #fff;
+    color: hsl(219, 29%, 14%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .kira img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid hsl(210, 46%, 95%);
+  }
+  
+  .kira .second-text,
+  .kira .user h4 {
+    color: #9c9fa4;
+  }
+  .jeanette {
+    background-color: #fff;
+    color: hsl(219, 29%, 14%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .jeanette img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid hsl(210, 46%, 95%);
+  }
+  
+  .jeanette .second-text,
+  .jeanette .user h4 {
+    color: #9c9fa4;
+  }
+  
+  .patrick {
+    background-color:  hsl(219, 29%, 14%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .patrick img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid hsl(263, 55%, 52%);
+  }
+  
+  .patrick .second-text,
+  .patrick .user h4 {
+    color: #757984;
+  }
+.jonathan .user,
+.patrick .user {
+  margin-top: 50px;
+}
+.daniel .user{
+    margin-top: 60px;
+}
+.jeanette .user{
+    margin-top: 16px;
+}
+.kira .user{
+    position: relative;
+    top: -8px;
+}
+.daniel .user h4,
+.jonathan .user h4,
+.kira .user h4,
+.jeanette .user h4,
+.patrick .user h4 {
+  position: relative;
+  top: -54px;
+  left: 70px;
+  z-index: 10;
+  margin: .2rem;
+}
+
+.daniel .first-text,
+.jonathan .first-text,
+.kira .first-text,
+.jeanette .first-text,
+.patrick .first-text {
+  font-size: 22px;
+  z-index: 10;
+ top: -2.4rem;
+  position: relative;
+}
+
+.daniel .second-text,
+.jonathan .second-text,
+.jeanette .second-text,
+.patrick .second-text {
+  margin-top: 10px;
+  top: -3.4rem;
+  position: relative;
+}
+.kira .second-text {
+    position: relative;
+    margin: 0 auto;
+    top: -2rem;
+}
+.kira .first-text{
+    margin: 0 auto;
+    width: 90%;
+}
+.container {
+  animation: slidein 2s, fadeIn 3s;
+}
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 300%;
+  
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+   
+  }
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  } 
+
+  @media(min-width:1200px){
+    section:hover{
+      transform: scale(1.1);
+      z-index: 30;
+    }
+  }
+@media(max-width:1280px){
+    main{
+        margin: 0 auto;
+    }
+    .container{
+        display: flex;
+       flex-direction: column;
+    }
+    .col-one, .col-two{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .col-one .daniel, .col-one .jonathan,
+    .col-one .jeanette, .col-one .patrick{
+        width: 33%;
+        max-height:35% ;
+        margin: 1%;
+    }
+    .jonathan .user, .jeanette .user, .patrick .user, .kira .user, .daniel .user{
+      font-size: 1.1rem;
+      margin: 0 auto;
+      transform: translateX(-20%);
+    }
+    .col-two{
+      max-width: 70%;
+      margin: 1% auto;
+    }
+    .daniel .second-text,
+  .jonathan .second-text,
+  .jeanette .second-text,
+  .patrick .second-text {
+  margin-top: 10px;
+  top: -1rem;
+  position: relative;
+  }
+  .jeanette .second-text, .jonathan .second-text{
+  font-size: 16px;
+  }
+  .daniel .user img:nth-child(4) {
+    position: absolute;
+    left: 100%;
+    top: .2rem;
+    z-index: 1;
+    width: 100px;
+  }
+  
+}
+
+
+@media(max-width:1000px){
+    
+    .container{
+        display: flex;
+    }
+    .col-one, .col-two{
+      display: flex;
+      justify-content: center;
+  }
+    .col-one .daniel, .col-one .jonathan,
+    .col-one .jeanette, .col-one .patrick{
+        width: 60%;
+        margin-top: 1rem;
+    }
+    
+    .col-two{
+      max-width: 60.6%; 
+    }
+    .daniel .user img:nth-child(4) {
+      position: absolute;
+      left: 99%;
+      top: .2rem;
+      z-index: 1;
+      width: 100px;
+    }
+}
+@media(max-width:770px){
+    .container{
+        display: flex;
+    }
+    .col-one, .col-two{
+      display: flex;
+      justify-content: center;
+  }
+    .col-one .daniel, .col-one .jonathan,
+    .col-one .jeanette, .col-one .patrick{
+        width: 90%;
+        margin-top: 1rem;
+    }
+    .col-two{
+      max-width: 90%;
+      margin: 1% auto;
+    }
+    .daniel .second-text,
+    .jonathan .second-text,
+    .jeanette .second-text,
+    .patrick .second-text, .kira .second-text {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .daniel .user img:nth-child(4) {
+    position: absolute;
+    left: 100%;
+    top: .2rem;
+    z-index: 1;
+    width: 110px;
+  }
+}
