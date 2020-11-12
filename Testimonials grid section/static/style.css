@@ -7,12 +7,13 @@
       background-color: hsl(210,46%,95%);
       height: 100vh;
       font-size: 13px;
+      font-family: 'Barlow Semi Condensed', sans-serif;
   }
 
   main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 280px 270px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 320px 270px;
     grid-column-gap: 30px;
     grid-row-gap: 25px;
     width: 100%;
@@ -22,16 +23,18 @@
         "box-1 box-1 box-2 box-3"
         "box-4 box-5 box-5 box-3"
     ;
-    margin: 4rem auto;
+    margin: 6rem auto;
+    animation: fadeIn 2s;
   }
 
+  
 
 .daniel,
 .jonathan,
 .kira,
 .jeanette,
 .patrick {
-  padding: 30px;
+  padding: 30px ;
   border-radius: 8px;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -42,7 +45,7 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     grid-area: box-1;
 }
 
@@ -54,22 +57,23 @@
   }
   .daniel .user img:nth-child(4) {
     position: absolute;
-    width: 90px;
-    left: 70%;
-    top: 2rem;
+    left: 65%;
+    top: .2rem;
     z-index: 1;
+    width: 130px;
   }
   .daniel .second-text,
-  .daniel .user p:nth-child(3) {
+  .jonathan .user h4 {
     color: #aa7eed;
+
   }
 
   .jonathan {
-    background-color: hsl(219, 29%, 14%);
+    background-color: hsl(217, 19%, 35%);
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     grid-area: box-2;
   }
   .jonathan img {
@@ -80,7 +84,7 @@
   }
   
   .jonathan .second-text,
-  .jonathan .user p:nth-child(3) {
+  .jonathan .user h4 {
     color: #9097a7;
   }
 
@@ -91,6 +95,7 @@
     flex-direction: column;
     justify-content: space-around;
     grid-area: box-3;
+    padding-top: 25px;
   }
   
   .kira img {
@@ -101,7 +106,7 @@
   }
   
   .kira .second-text,
-  .kira .user p:nth-child(3) {
+  .kira .user h4 {
     color: #9c9fa4;
   }
   .jeanette {
@@ -121,16 +126,16 @@
   }
   
   .jeanette .second-text,
-  .jeanette .user p:nth-child(3) {
+  .jeanette .user h4 {
     color: #9c9fa4;
   }
   
   .patrick {
-    background-color: hsl(217, 19%, 35%);
+    background-color:  hsl(219, 29%, 14%);
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     grid-area: box-5;
   }
   
@@ -142,7 +147,7 @@
   }
   
   .patrick .second-text,
-  .patrick .user p:nth-child(3) {
+  .patrick .user h4 {
     color: #757984;
   }
 
@@ -151,17 +156,17 @@
 .kira .user,
 .jeanette .user,
 .patrick .user {
-  margin-bottom: -27px;
+  margin-bottom: 10px;
 }
 
-.daniel .user p,
-.jonathan .user p,
-.kira .user p,
-.jeanette .user p,
-.patrick .user p {
+.daniel .user h4,
+.jonathan .user h4,
+.kira .user h4,
+.jeanette .user h4,
+.patrick .user h4 {
   position: relative;
-  top: -48px;
-  left: 70px;
+  top: -46px;
+  left: 60px;
   z-index: 10;
 }
 
@@ -170,8 +175,10 @@
 .kira .first-text,
 .jeanette .first-text,
 .patrick .first-text {
-  font-size: 20px;
+  font-size: 18px;
   z-index: 10;
+  top: -1rem;
+  position: relative;
 }
 
 .daniel .second-text,
@@ -179,24 +186,21 @@
 .kira .second-text,
 .jeanette .second-text,
 .patrick .second-text {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 12px;
   }
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
-  
-
-div {
-    animation-duration: 2s;
-    animation-name: slidein;
+  div{
+    animation: slidein 2s;
   }
-
 
 @keyframes slidein {
     from {
@@ -211,7 +215,16 @@ div {
      
     }
   }
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    } 
 
+    @media(min-width:1200px){
+      .daniel:hover, .jonathan:hover, .kira:hover, .jeanette:hover, .patrick:hover{
+        transform: scale(1.1);
+      }
+    }
  
   @media screen and (min-width:992px) and (max-width:1000px) {
 
@@ -229,6 +242,7 @@ div {
         ;
         max-width: 850px;
     }
+    
 }
 
 @media screen and (min-width:768px) and (max-width:991px) {
@@ -248,8 +262,9 @@ div {
         max-width: 700px;
     }
     .daniel .user img:nth-child(4){
-      width: 80px;
-      top: 3rem;
+      width: 125px;
+      height: 130px;
+      top: .8rem;
     }
 }
 
@@ -271,12 +286,13 @@ div {
         max-width: 500px;
     }
     .daniel .user img:nth-child(4){
-      width: 70px;
-      top: 3.5rem;
+      height: 140px;
+      top: .6rem;
     }
+
 }
 
-@media screen and (min-width:375px) and (max-width:575px) {
+@media screen and (min-width:377px) and (max-width:575px) {
 
     body {
         height: 100%;
@@ -294,12 +310,17 @@ div {
         max-width: 500px;
     }
     .daniel .user img:nth-child(4){
-      width: 60px;
-      top: 4rem;
+      width: 130px;
+      top: .8rem;
+      right: 12px;
+    }
+    .jonathan .user, .jeanette .user{
+     position: relative;
+     left: -16px;
     }
 }
 
-@media screen and (min-width:0px) and (max-width:374px) {
+@media screen and (min-width:0px) and (max-width:420px) {
 
     body {
         height: 100%;
@@ -318,9 +339,9 @@ div {
         max-width: 330px;
     }
     .daniel .user img:nth-child(4){
-      width: 50px;
-      top: 4.5rem;
-      right: 1.5rem ;
+      width: 100px;
+      height: 120px;
+      top: .8rem;
+      right: 40px;
     }
-
 }
