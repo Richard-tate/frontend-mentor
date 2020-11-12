@@ -6,6 +6,7 @@ body{
     margin: 0;
     height: 80vh;
     font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 main{
     max-width: 1200px;
@@ -182,7 +183,7 @@ main{
 .kira .first-text,
 .jeanette .first-text,
 .patrick .first-text {
-  font-size: 22px;
+  font-size: 20px;
   z-index: 10;
  top: -2.4rem;
   position: relative;
