@@ -25,7 +25,8 @@ main{
 .col-two{
     display: flex;
     max-width: 25%;
-    margin-bottom: 1%;
+    margin-bottom: .5%;
+    margin-left: .3%;
 }
 .col-one .daniel, .col-one .patrick{
     width: 64%;
@@ -38,6 +39,7 @@ main{
 
 .col-one section{
     margin-right: 2%;
+   margin-bottom: 2%;
 }
 
 .daniel,
@@ -207,7 +209,11 @@ main{
     width: 90%;
 }
 .container {
-  animation: slidein 2s, fadeIn 3s;
+  animation: slidein 2s ease, fadeIn 3s ease;
+}
+
+section{
+  transition:  transform .5s ease;
 }
 @keyframes slidein {
   from {
