@@ -1,0 +1,263 @@
+:root{
+  --bg-soft-violet: hsl(273, 75%, 66%);
+  --bg-soft-blue: hsl(240, 73%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  --text-red:hsl(14, 88%, 65%)
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  
+}
+main{
+  background: linear-gradient(var(--bg-soft-violet),var(--bg-soft-blue));
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.card-container{
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image-con{
+  height: 11%;
+  width: 5.5%;
+  position: relative;
+  left: 1.1%;
+  z-index: 2;
+  top: 1.4%;
+}
+.box{
+    position: relative;
+    left: -45%;
+    z-index: 3;
+}
+.card{
+  display: flex;
+  width: 70%;
+  height: 65%;
+  background-color: #fff;
+  border-radius: 25px;
+  
+}
+.image-container{
+  width:46% ;
+  overflow: hidden;
+}
+.mobile, .bg-mobile{
+  display: none;
+}
+
+.desktop, .bg-desktop{
+  position: relative;
+}
+
+.bg-desktop{
+  top: -112%;
+  left: -105%;
+}
+.desktop{
+  top: 18%;
+  left: -20%;
+  z-index: 1;
+}
+.accordion-container{
+  width: 52%;
+  margin-left: 1.5%;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+input {
+  display: none;
+}
+
+label {
+  display: block;    
+  padding: 20px 22px;
+  margin: 0 0 1px 0;
+  cursor: pointer;
+  background: #ffffff;
+  color: var(--very-dark-grayish-blue);
+  transition: ease .5s;
+  position: relative;
+}
+
+label:hover {
+  color: orange;
+  font-weight: 700;
+}
+
+label::after {
+font-family: "Font Awesome 5 Free";
+content: '\f078';
+font-weight: bold;
+font-size: 22px;
+position: absolute;
+right: 10px;
+top: 6px;
+color: orange;
+}
+
+input:checked + label::after {
+content: '\f077';
+color: orange;
+}
+
+.content {
+  background: #ffffff;
+  padding: 10px 25px;
+}
+
+input + label + .content {
+  display: none;
+}
+
+input:checked + label + .content {
+  display: block;
+}
+
+
+@media(max-width:1650px){
+  .bg-desktop{
+    left: -140%;
+    transition: ease .5s;
+  }
+  .box-image-con{
+    left: -1%;
+    transition: ease .5s;
+  }
+}
+@media(max-width:1440px){
+  .bg-desktop{
+    left: -150%;
+    transition: ease .5s;
+  }
+  .box-image-con{
+    left: -1%;
+    transition: ease .5s;
+  }
+}
+@media(max-width:1380px){
+  .bg-desktop{
+    display: none;
+    transition:  ease .5s;
+  }
+  .box-image-con{
+    display: none;
+    transition:  ease .5s;
+  }
+
+  .bg-mobile{
+    display: block;
+    position: relative;
+    top: 10%;
+    transition:  ease .5s;
+    width: 100%;
+  }
+  .desktop{
+    display: none;
+    transition:  ease .5s;
+  }
+  .mobile{
+    display: block;
+    position: relative;
+    top: 28%;
+    transition:  ease .5s;
+    width: 100%;
+  }
+}
+
+@media (max-width:1000px){
+  .card{
+    flex-direction: column;
+  }
+  .image-container{
+      height:40%;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: visible;
+  }
+
+  .bg-mobile, .mobile{
+    top: -40%;
+    margin: 0 auto;
+    width: 60%;
+  }
+  .bg-mobile{
+    top: -80%;
+    margin: 0 auto;
+  }
+  .accordion-container{
+    height: 60%;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+@media(max-width:700px){
+  .bg-mobile,.mobile{
+    width: 80%;
+  }
+  .card{
+    height: 95%;
+    width: 90%;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }
+  .image-container{
+    height: 25%;
+    position: relative;
+    top: 2rem;
+  }
+  .accordion-container{
+    height: 75%;
+    width: 100%;
+    margin-right: 2rem;
+  }
+  .attribution{
+    margin-top: 1rem;
+  }
+}
+@media(max-width:500px){
+  .bg-mobile,.mobile{
+    width: 100%;
+  }
+  .image-container{
+    width: 100%;
+  }
+  .mobile{
+    top: -40%;
+    left: -5%;
+  }
+  .bg-mobile{
+    top: -110%;
+  }
+  .attribution{
+    margin-top: 1rem;
+  }
+  .accordion-container{
+    height: 75%;
+    width: 100%;
+    justify-content: center;
+    text-align: left;
+  }
+}
