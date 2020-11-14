@@ -15,7 +15,11 @@
 body{
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 12px;
+  color: var(--very-dark-grayish-blue);
   
+}
+h2{
+  color: var(--very-dark-grayish-blue);
 }
 main{
   background: linear-gradient(var(--bg-soft-violet),var(--bg-soft-blue));
@@ -48,7 +52,7 @@ main{
 .card{
   display: flex;
   width: 70%;
-  height: 65%;
+  height: 75%;
   background-color: #fff;
   border-radius: 25px;
   
@@ -66,7 +70,7 @@ main{
 }
 
 .bg-desktop{
-  top: -112%;
+  top: -149%;
   left: -105%;
 }
 .desktop{
@@ -82,6 +86,10 @@ main{
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  overflow: auto;
+}
+.accordion-container h2{
+margin-left: 1.3rem;
 }
 input {
   display: none;
