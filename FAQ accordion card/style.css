@@ -54,8 +54,6 @@ main{
   height: 75%;
   background-color: #fff;
   border-radius: 25px;
-  color: var(--dark-grayish-blue);
-  
 }
 .image-container{
   width:46% ;
@@ -84,7 +82,7 @@ main{
   justify-content: center;
   text-align: left;
   overflow: hidden;
-  color: var(--light-grayish-blue);
+  color: var(--dark-grayish-blue);
 }
 .accordion-container h2{
 margin-left: 1.3rem;
