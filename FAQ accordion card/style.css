@@ -84,7 +84,7 @@ main{
   justify-content: center;
   text-align: left;
   overflow: hidden;
-  color: var(--dark-grayish-blue);
+  color: var(--light-grayish-blue);
 }
 .accordion-container h2{
 margin-left: 1.3rem;
@@ -103,7 +103,7 @@ label {
   transition: ease .5s;
   position: relative;
   font-size: 12px;
-  border-bottom: var(--dark-grayish-blue) 1px solid;
+  border-bottom: var(--light-grayish-blue) 1px solid;
 }
 
 label:hover {
