@@ -189,27 +189,36 @@
     .card-container{
         flex-flow: row nowrap;
         padding: 0 15%;
-       justify-content: center;
-       align-items: center;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 5rem;
-       width: 100%;
+        width: 100%;
     }
  
     .header-card,
     .usage-card {
-      margin-bottom: 0;
+      margin-bottom: -.5rem;
     }
   
     .header-card {
       padding: 2rem;
       width: 55%;
       margin-right: 1.5rem;
+      height: 190px;
     }
-  
+    .header-icon{
+      padding: 1rem .9rem
+    }
+    .upload{
+      padding: 1.1rem .9rem;
+    }
+  .header-icon.doc{
+    padding: .85rem 1rem;
+  }
     .usage-card {
       padding: 2.1rem;
       height: 145px;
-      top: .2rem;
+      top: .7rem;
     }
   
     p.usage-info {
