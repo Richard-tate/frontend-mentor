@@ -186,7 +186,7 @@
         flex-flow: row nowrap;
         padding: 0 20%;
         position: relative;
-        top: 2rem;
+        top: -1rem;
     }
  
     .header-card,
